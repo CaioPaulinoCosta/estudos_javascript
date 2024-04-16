@@ -277,3 +277,79 @@ function isPalindrome(text) {
 
 console.log(isPalindrome("radar"));
 console.log(isPalindrome("hello"));
+
+// ex-27
+function calculateAverage(numbers) {
+  if (numbers.length === 0) {
+    return 0;
+  }
+
+  const sum = numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  }, 0);
+
+  const average = sum / numbers.length;
+
+  return average;
+}
+
+console.log(calculateAverage([1, 2, 3, 4, 5]));
+console.log(calculateAverage([]));
+
+// ex-28
+function reverseString(text) {
+  let palavraFormatada = text.toLowerCase().replace(/[\W_]/g, " ");
+  let invertida = palavraFormatada.split("").reverse().join("");
+  return invertida;
+}
+
+console.log(reverseString("Caio"));
+
+// ex-29
+function countVowels(text) {
+  let count = 0;
+
+  for (let i = 0; i < text.length; i++) {
+    if (
+      text[i] == "a" ||
+      text[i] == "e" ||
+      text[i] == "i" ||
+      text[i] == "o" ||
+      text[i] == "u"
+    ) {
+      count++;
+    } else if (
+      text[i] == "A" ||
+      text[i] == "E" ||
+      text[i] == "I" ||
+      text[i] == "O" ||
+      text[i] == "U"
+    ) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countVowels("AEIOU"));
+
+console.log("------------");
+
+// ex-30
+function sumEvenNumbers(array) {
+  let soma = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      soma += array[i];
+    }
+  }
+
+  return soma;
+}
+
+const numeros = [1, 2, 3, 4, 5, 6, -8, 10];
+const somaPares = sumEvenNumbers(numeros);
+console.log("Soma de números pares:", somaPares);
+
+// ex-31
