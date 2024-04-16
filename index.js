@@ -351,3 +351,5 @@ function sumEvenNumbers(array) {
 const numeros = [1, 2, 3, 4, 5, 6, -8, 10];
 const somaPares = sumEvenNumbers(numeros);
 console.log("Soma de números pares:", somaPares);
+
+// ex-31
