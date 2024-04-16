@@ -94,3 +94,53 @@ if (divisoes == 2) {
 } else {
   consotle.log(`O número ${p} não é primo`);
 }
+
+// ex-11
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+let semPares = [];
+
+for (let k = 0; k < arr.length; k++) {
+  if (arr[k] % 2 == 1) {
+    semPares.push(arr[k]);
+  }
+}
+
+console.log(semPares);
+
+// ex-12
+let n1 = 10;
+let n2 = 9;
+let n3 = -10;
+let n4 = 0;
+
+function classificarNumero(n) {
+  if (n === 0) {
+    console.log("Neutro");
+  } else if (n % 2 == 0 && n > 0) {
+    console.log("Positivo e par");
+  } else if (n % 2 == 1 && n > 0) {
+    console.log("Positivo e impar");
+  } else {
+    console.log("Negativo");
+  }
+}
+
+console.log(classificarNumero(n3));
+
+// ex-13
+function classificarNumero(n) {
+  if (n === 0) {
+    return "Neutro";
+  } else if (n % 2 === 0 && n > 0) {
+    return "Positivo e Par";
+  } else if (n % 2 !== 0 && n > 0) {
+    return "Positivo e Ímpar";
+  } else {
+    return "Negativo";
+  }
+}
+
+console.log(classificarNumero(1));
+console.log(classificarNumero(2));
+console.log(classificarNumero(-10));
+console.log(classificarNumero(0));
