@@ -108,24 +108,24 @@ for (let k = 0; k < arr.length; k++) {
 console.log(semPares);
 
 // ex-12
-let n1 = 10;
-let n2 = 9;
-let n3 = -10;
-let n4 = 0;
+// let n1 = 10;
+// let n2 = 9;
+// let n3 = -10;
+// let n4 = 0;
 
-function classificarNumero(n) {
-  if (n === 0) {
-    console.log("Neutro");
-  } else if (n % 2 == 0 && n > 0) {
-    console.log("Positivo e par");
-  } else if (n % 2 == 1 && n > 0) {
-    console.log("Positivo e impar");
-  } else {
-    console.log("Negativo");
-  }
-}
+// function classificarNumero(n) {
+//   if (n === 0) {
+//     console.log("Neutro");
+//   } else if (n % 2 == 0 && n > 0) {
+//     console.log("Positivo e par");
+//   } else if (n % 2 == 1 && n > 0) {
+//     console.log("Positivo e impar");
+//   } else {
+//     console.log("Negativo");
+//   }
+// }
 
-console.log(classificarNumero(n3));
+// console.log(classificarNumero(n3));
 
 // ex-13
 function classificarNumero(n) {
@@ -144,3 +144,136 @@ console.log(classificarNumero(1));
 console.log(classificarNumero(2));
 console.log(classificarNumero(-10));
 console.log(classificarNumero(0));
+
+// ex-14
+
+function olaMundo() {
+  console.log("Hello World!");
+}
+
+olaMundo();
+
+// ex-15
+
+function showAge(age) {
+  console.log(`Você tem ${age} anos`);
+}
+
+showAge(19);
+
+// ex-16
+const sumNumber = (a, b) => a + b;
+console.log(sumNumber(2, 2));
+
+// ex-17
+function showRandomNumber(num) {
+  randomNum = Math.floor(Math.random() * num) + 1;
+  console.log(randomNum.toFixed(2));
+}
+
+showRandomNumber(50);
+
+// ex-18
+function driveSchool(age) {
+  if (age > 18) {
+    console.log("Cê pode entrar na auto escola");
+  } else {
+    console.log("Cê num ta podendo entrar em auto escola não");
+  }
+}
+
+driveSchool(21);
+driveSchool(15);
+
+// ex-19
+
+function checkValue(v) {
+  if (typeof v === "string") {
+    console.log("O dado inserido é do tipo boolean");
+  } else if (typeof v === "number") {
+    console.log("O dado inserido é do tipo Number");
+  } else if (typeof v === "boolean") {
+    console.log("O dado inserido é do tipo String");
+  }
+}
+
+checkValue(true);
+checkValue(1);
+checkValue("Jessica");
+
+// ex-20
+function transformaPositivo(num) {
+  console.log(Math.abs(num));
+}
+
+transformaPositivo(-50);
+
+// ex-21
+function limitaCaractere(text) {
+  if (text.length > 10) {
+    console.log("Texto muito longo");
+  } else {
+    console.log("Texto dentro do limite");
+  }
+}
+
+limitaCaractere(
+  "SAHJKSAHKSHAKLSHKLAHSKLAHSKLHAKLSHAKLSHKALHSKLAHSKHKALSHKASHAHSKAKSHKASHKSA"
+);
+
+limitaCaractere("Caio");
+
+// ex-22
+function elevaNum(num1, num2) {
+  console.log(Math.pow(num1, num2));
+}
+
+elevaNum(3, 2);
+
+// ex-23
+function decrementaNum(num) {
+  for (let f = num; f > 0; f--) {
+    if (f % 2 == 0) {
+      console.log(f);
+    }
+  }
+}
+
+decrementaNum(20);
+
+// ex-24
+function soma(a, b, c) {
+  return a + b + c;
+}
+
+let resultado = soma(5, 10, 15);
+
+// ex-25
+function faixaEtaria(age) {
+  if (age < 12) {
+    return "Criança";
+  } else if (age < 25) {
+    return "Jovem";
+  } else {
+    return "Adulto";
+  }
+}
+let crianca = faixaEtaria(5);
+let adulto = faixaEtaria(26);
+
+console.log("Faixa etária de 5 anos: ", crianca);
+console.log("Faixa etária de 26 anos: ", adulto);
+
+// ex-26
+function isPalindrome(text) {
+  let palavraFormatada = text.toLowerCase().replace(/[\W_]/g, " ");
+  let invertida = palavraFormatada.split("").reverse().join("");
+  if (palavraFormatada == invertida) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isPalindrome("radar"));
+console.log(isPalindrome("hello"));
