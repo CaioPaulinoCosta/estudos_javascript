@@ -353,3 +353,43 @@ const somaPares = sumEvenNumbers(numeros);
 console.log("Soma de números pares:", somaPares);
 
 // ex-31
+function showType(a) {
+  if (typeof a === "string") {
+    console.log("O valor é do tipo String.");
+  } else if (typeof a === "number") {
+    console.log("O valor é do tipo Number.");
+  } else if (typeof a === "boolean") {
+    console.log("O valor é do tipo Boolen.");
+  }
+}
+
+showType("Caio");
+showType(19);
+showType(true);
+
+// ex-32
+function tornaBinario(num) {
+  let valorBinario = "";
+
+  while (num > 0) {
+    let resto = num % 2; // Obter o resto da divisão por 2
+    valorBinario = resto + valorBinario; // Adicionar o resto à frente da string binária
+    num = Math.floor(num / 2); // Dividir o número por 2
+  }
+
+  // Se não há dígitos binários (quando num é 0), adiciona '0' à frente
+  if (valorBinario === "") {
+    valorBinario = "0";
+  }
+
+  console.log(valorBinario);
+}
+
+tornaBinario(10);
+
+// ex-33
+function checaInteiro(num) {
+  return Number.isInteger(num);
+}
+console.log(checaInteiro(50));
+console.log(checaInteiro(7.5));
