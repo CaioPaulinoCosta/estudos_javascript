@@ -135,3 +135,30 @@ function findMaxNumber(arr) {
 }
 
 console.log(findMaxNumber([1, 2, 10, 3, 4]));
+
+// 13
+
+function sumUniqueNumbers(numbers) {
+  const count = {};
+
+  for (let num of numbers) {
+    if (count[num] === undefined) {
+      count[num] = 1;
+    } else {
+      count[num]++;
+    }
+  }
+
+  let sum = 0;
+
+  for (let num in count) {
+    if (count[num] === 1) {
+      sum += Number(num);
+    }
+  }
+
+  return sum;
+}
+
+console.log(sumUniqueNumbers([1, 2, 2, 3, 4, 4, 5])); // 1 + 3 + 5 = 9
+console.log(sumUniqueNumbers([10, 20, -10, 0, 10, 20])); // -10 + 0 = -10
