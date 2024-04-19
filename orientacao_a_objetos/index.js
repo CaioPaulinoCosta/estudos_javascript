@@ -53,3 +53,63 @@ console.log(pessoaNova.maos);
 
 // 5 - classes
 console.log("5 - classes");
+
+let cachorro = {
+  patas: 4,
+  raca: "SRD",
+  latir: function () {
+    console.log("Au, au!");
+  },
+};
+
+let labrador = Object.create(cachorro);
+
+labrador.latir();
+
+labrador.raca = "Labrador";
+console.log(labrador.raca);
+
+// 6 - mais sobre classes | classe com function
+console.log("6 - mais sobre classes | classe com function");
+
+function criaCachorro(raca, patas, cor) {
+  let cachorro = Object.create({});
+  cachorro.raca = raca;
+  cachorro.patas = patas;
+  cachorro.cor = cor;
+  return cachorro;
+}
+
+let doberman = criaCachorro("Doberman", "4", "Preto");
+console.log(doberman);
+
+// 7 - mais sobre classes | new
+console.log("7 - mais sobre classes | new");
+
+function Casa(garagem, quarto, banheiro, cozinha) {
+  this.garagem = garagem;
+  this.quarto = quarto;
+  this.banheiro = banheiro;
+  this.cozinha = cozinha;
+}
+
+let mansao = new Casa(2, 6, 4, 2);
+
+console.log(mansao.garagem);
+
+// 8 - mais sobre classes | metodos com prototype
+console.log("8 - mais sobre classes | metodos com prototype");
+
+function Peixe(barbatana, cauda, cor) {
+  this.barbatana = barbatana;
+  this.cauda = cauda;
+  this.cor = cor;
+
+  Peixe.prototype.nadar = function () {
+    console.log("O peixe nadou.");
+  };
+}
+
+let sardinha = new Peixe(2, 1, "cinza");
+
+sardinha.nadar();
